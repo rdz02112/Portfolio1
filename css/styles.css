@@ -454,7 +454,7 @@ h3.my-profession
     margin-top: 0px;
     flex: 0 0 100%;
     max-width: 100%;
-    border-left: 5px solid var(--bg-black-50);
+    border-left: 5px solid var(--skin-color);
 }
 
 .about .about-content .tool-info .tool-item p {
