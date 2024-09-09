@@ -12,6 +12,7 @@
     --bg-black-50: #2e2e2e; /* สีพื้นหลังสำหรับแยกองค์ประกอบ */
     --text-black-900: #ffffff; /* สีข้อความหลัก (สีขาว) */
     --text-black-700: #d1d5db; /* สีข้อความรอง (เทาอ่อน) */
+    --text-black-700: #424242;
     --skin-color: #e63946; /* โทนสีแดง */
     --highlight-color: #3b82f6; /* โทนสีฟ้าคราม */
 }
@@ -503,7 +504,7 @@ h3.my-profession
 
 .about .about-content .skills .skill-item .progress {
     position: relative;
-    background-color: var(--bg-black-50);
+    background-color: var(--text-black-700);
     height: 7px;
     border-radius: 4px;
     width: 100%;
