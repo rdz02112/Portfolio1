@@ -215,6 +215,21 @@ ul
     right: 0rem;
 }
 
+.aside .logo a {
+    color: white;
+  }
+  
+  /* visited link */
+  .logo a:visited {
+    color: rgb(255, 255, 255);
+  }
+  
+  /* mouse over link */
+  .logo a:hover {
+    color: rgb(236, 48, 142);
+  }
+  
+  
 .aside .logo a span {
     font-family: 'Clicker Script', cursive;
     font-size: 40px;
@@ -480,6 +495,10 @@ h3.my-profession
     margin-top: 10px;
 }
 
+.about .about-content .personal-info .info-item p b a {
+    color: var(--text-black-900);
+
+}
 .about .about-content .skills {
     flex: 0 0 40%;
     max-width: 40%;
@@ -712,6 +731,21 @@ h3.my-profession
     box-sizing: border-box; 
 }
 
+.portfolio .portfolio-item a {
+    color: white;
+  }
+  
+  /* visited link */
+  .portfolio-item a:visited {
+    color: rgb(255, 255, 255);
+  }
+  
+  /* mouse over link */
+  .portfolio-item a:hover {
+    color: rgb(255, 0, 0);
+  }
+  
+
 .portfolio .portfolio-item-inner {
     border: 6px solid var(--bg-black-100);
     border-radius: 10px;
@@ -736,6 +770,22 @@ h3.my-profession
     gap: 20px; 
 }
 
+.contact-info .contact-info-item a {
+    color: white;
+  }
+  
+  /* visited link */
+  .contact-info-item a:visited {
+    color: rgb(214, 136, 136);
+  }
+  
+  /* mouse over link */
+  .contact-info-item a:hover {
+    color: rgb(255, 0, 0);
+  }
+  
+
+
 .contact-info-item {
     flex: 0 1 30%; 
     max-width: 30%;
@@ -743,7 +793,7 @@ h3.my-profession
     padding: 20px;
     background-color: var(--bg-black-100); 
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info-item .icon {
