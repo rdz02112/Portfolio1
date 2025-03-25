@@ -9,6 +9,9 @@
      <link rel="stylesheet" href="css/styles.css">
      <link rel="stylesheet" href="css/color-1.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     
 </head>
 <body>
     <!-- Container Start -->
@@ -36,22 +39,21 @@
             <section id="home" class="home section">
                 <div class="container">
                     <div class="row">
-                        <div class="home-info padd-15">
+                        <div class="home-info padd-15" data-aos="fade-right" data-aos-duration="1000">
                             <h3 class="hello">Hello, My name is <span class="name">Siraphat</span></h3>
-                            <h3 class="my-profession">Front-end <span  class="typing">Developer</span></h3>
-                            <p>Front-end developers are passionate about creating engaging web experiences.
-                            </p>
-                            <!--<a href="#contact" class="btn hire-me">Hire me</a>-->
+                            <h3 class="my-profession">Front-end <span class="typing"></span></h3>
+                            <p>Front-end developers are passionate about creating engaging web experiences.</p>
+                            <a href="#contact" class="btn hire-me">Hire me</a>
                         </div>
-                        <div class="home-img padd-15">
-                            <img src="img/hero.jpg" alt="">
+                        <div class="home-img padd-15" data-aos="fade-left" data-aos-duration="1000">
+                            <img src="img/hero.jpg" alt="" class="hero-img">
                         </div>
                     </div>
                 </div>
-             </section>
+            </section>
              <!-- Home End -->
              <!-- About Section Start -->
-             <section id="about" class="about section">
+             <section id="about" class="about section" >
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -97,8 +99,8 @@
                                 
                             </div>
                             <div class="row">
-                                <div class="skills padd-15">
-                                    <div class="row">
+                                <div class="skills padd-15" >
+                                    <div class="row" data-aos="fade-right">
                                         
                                         <div class="skill-item padd-15"><h1>Skill</h1>
                                             <h5>HTML</h5>
@@ -144,7 +146,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tool-info padd-15"><h1>Tools</h1>
+                                <div class="tool-info padd-15" data-aos="fade-left"><h1>Tools</h1>
                                     <div class="row">
                                         <div class="tool-item padd-15">
                                             <p>Visutal Studio Code</p>
@@ -162,7 +164,7 @@
                             
                             
                             <div class="row">
-                                <div class="about padd-15">
+                                <div class="about padd-15" data-aos="fade-right">
                                     <h3 class="title">Education</h3>
                                     <div class="row">
                                         <div class="timeline-box shadow-dark">
@@ -181,7 +183,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="experience padd-15">
+                                <div class="experience padd-15" data-aos="fade-left">
                                     <h3 class="title">Experience</h3>
                                     <div class="row">
                                         <div class="timeline-box shadow-dark">
@@ -365,6 +367,39 @@
     
     <!-- JS -->
      <script src="js/script.js"></script>
+     <script>
+    const words = ["Developer"];
+    let i = 0, j = 0, currentWord = "", isDeleting = false;
+    const typingSpeed = 150; // ความเร็วของการพิมพ์ (ms)
+    const pauseTime = 100;  // เวลาหยุดหลังพิมพ์ครบ
+
+    function typeEffect() {
+        const typingElement = document.querySelector(".typing");
+        currentWord = words[i];
+
+        if (isDeleting) {
+            typingElement.textContent = currentWord.substring(0, j--);
+        } else {
+            typingElement.textContent = currentWord.substring(0, j++);
+        }
+
+        if (!isDeleting && j === currentWord.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, pauseTime); // หยุด 1 วิ ก่อนเริ่มลบ
+            return;
+        } else if (isDeleting && j === 0) {
+            isDeleting = false;
+            i = (i + 1) % words.length;
+        }
+
+        setTimeout(typeEffect, typingSpeed); // ความเร็วคงที่
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        typeEffect();
+        AOS.init();
+    });
+</script>
 
 </body>
 </html>

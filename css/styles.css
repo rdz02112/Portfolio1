@@ -161,6 +161,8 @@ ul
 .btn:hover
 {
     transform: scale(1.05);
+    background: linear-gradient(90deg, #ff5e62, #ff9966);
+
 }
 
 .shadow-dark
