@@ -456,25 +456,26 @@ h3.my-profession
     border-bottom: 1px solid var(--bg-black-50);
 }
 
-.about .about-content .tool-info {
-    margin-left: 120px;
+.about .about-content .skills {
     margin-top: 10px;
     display: inline-block;
+    margin-right: 100px;
 }
 
-.about .about-content .tool-info h1 {
+.about .about-content .skills h1 {
     margin-top: 40px;
     
     display: inline-block;
 }
-.about .about-content .tool-info .tool-item {
+.about .about-content .skills .tool-item {
     margin-top: 0px;
-    flex: 0 0 100%;
-    max-width: 100%;
-    border-left: 5px solid var(--skin-color);
+    border-radius: 20px;
+    background-color: #4CAF50;
+    margin-left: 20px;
+    background-color: var(--bg-black-100);
 }
 
-.about .about-content .tool-info .tool-item p {
+.about .about-content .skills .tool-item p {
     font-weight: 600;
     padding: 10px 0;
     font-size: 16px;
@@ -482,75 +483,54 @@ h3.my-profession
     
 }
 
-.about .about-content .tool-info .tool-item p span {
+.about .about-content .skills .tool-item p span {
     font-weight: 400;
     color: var(--text-black-700);
     margin-left: 4px;
     display: inline-block;
 }
 .about .about-content .personal-info .buttons {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .about .about-content .personal-info .buttons .btn {
-    margin-right: 15px;
     margin-top: 10px;
 }
 
-.about .about-content .personal-info .info-item p b a {
-    color: var(--text-black-900);
 
-}
 .about .about-content .skills {
     flex: 0 0 40%;
     max-width: 40%;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 .about .about-content .skills .skill-item {
-    flex: 0 0 100%;
     max-width: 100%;
-    margin-top: -20px;
+    
 }
 
 .about .about-content .skills .skill-item h5 {
-    margin-top: 5px;
-    line-height: 40px;
-    font-weight: 600;
-    font-size: 16px;
-    color: var(--text-black-900);
+    padding: 8px 10px;
+    font-size: 15px;
+    line-height: 2;
     text-transform: capitalize;
+
+    color: #fff;
+    background-color: var(--bg-black-100);
+
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.1);
+
+    transition: all 0.3s ease;
+    cursor: default;
 }
 
-.about .about-content .skills .skill-item .progress {
-    position: relative;
-    background-color: var(--text-black-700);
-    height: 7px;
-    border-radius: 4px;
-    width: 100%;
-}
 
 .about .about-content .skills .skill-item {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 
-.about .about-content .skills .skill-item .progress .progress-in {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    border-radius: 4px;
-    background-color: var(--skin-color);
-}
 
-.about .about-content .skills .skill-item .skill-percent {
-    position: absolute;
-    right: 0;
-    color: var(--text-black-900);
-    top: -40px;
-    font-weight: 400;
-    line-height: 40px;
-}
 
 .about .about-content .about,
 .about .about-content .experience {
@@ -868,11 +848,12 @@ h3.my-profession
 
 @media (max-width:767px)
 {
-    .contact .contact-info-item
-    .portfolio .portfolio-item
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
     .service .service-item,
     .about .about-content .experience,
     .about .about-content .education,
+    .about .about-content .skills,
     .about .about-content .skills,
     .about .about-content .personal-info
     {
